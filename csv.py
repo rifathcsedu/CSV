@@ -1,11 +1,11 @@
 import csv
 import re
-    
+import sys    
 data = []
-
+file1=sys.argv[1]
 replaced=[]
-with open('data1_7Sep_17.csv') as csvDataFile:
-    csvReader = csv.reader(csvDataFile)
+with open(file1) as csvDataFile:
+	csvReader = csv.reader(csvDataFile)
     for row in csvReader:
         data.append(row[6])
     i = 1
